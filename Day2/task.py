@@ -7,6 +7,6 @@ split = float(input("How many people to split the bill?\n"))
 
 total_after_tip = total_bill + (total_bill * (tip_percent/100))
 
-total_after_split = str(total_after_tip/split)
+total_after_split = total_after_tip/split
 
-print("Each person should pay: $" + total_after_split)
+print(f"Each person should pay: ${round(total_after_split,2)}")
