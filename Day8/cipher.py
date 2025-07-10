@@ -8,14 +8,11 @@ def encode(word, shift_num):
     for char in word_list:
         index = alphabet.index(char.lower())
 
-        index_shifted = index + shift_num
+        index_shifted = (index + shift_num) % 26
 
-        if index_shifted > 25:
-            ret_list.append(alphabet[index_shifted - 26])
-        else:
-            ret_list.append(alphabet[index_shifted])
+        ret_list.append(alphabet[index_shifted])
     
-    print(ret_list)
+    return str(ret_list)
 
 def decode(word, shift_num):
 
@@ -31,7 +28,7 @@ def decode(word, shift_num):
 
         ret_list.append(alphabet[index_shifted])
     
-    return ret_list
+    return str(ret_list)
 
 running = True
 
